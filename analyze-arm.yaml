@@ -8,6 +8,6 @@ steps:
   inputs:
     modules: 'PSRule.Rules.Azure'
     inputPath: code-test/
-    baseline: Azure.All
+    baseline: Azure.Pillar.OperationalExcellence
     outputFormat: Sarif
     outputPath: output/ps-rule-results.sarif 

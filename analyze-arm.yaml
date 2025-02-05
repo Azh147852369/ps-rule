@@ -4,34 +4,9 @@ steps:
 
 - task: ps-rule-assert@2
   displayName: Analyze Azure template files
-  inputs:
-    modules: 'PSRule.Rules.Azure'
-
-# Code path to analyze
-- task: ps-rule-assert@2
-  displayName: Analyze Azure template files
+  continueOnError: true
   inputs:
     modules: 'PSRule.Rules.Azure'
     inputPath: code-test/ADO.jason
-
-# Adding baseline
-- task: ps-rule-assert@2
-  displayName: Analyze Azure template files
-  inputs:
-    modules: 'PSRule.Rules.Azure'
-    baseline: Azure.GA_2023_09   
-
-# To not stop the pipeline if there are errors
-- task: ps-rule-assert@2
-  displayName: Analyze Azure template files
-  continueOnError: true
-  inputs:
-    modules: 'PSRule.Rules.Azure'  
-
-# To manage output format and path
-- task: ps-rule-assert@2
-  displayName: Analyze Azure template files
-  inputs:
-    modules: 'PSRule.Rules.Azure'
-    outputFormat: Sarif
-    outputPath: output/ps-rule-results.sarif       
+    baseline: Azure.GA_2023_09 outputFormat: Sarif
+    outputPath: output/ps-rule-results.sarif 

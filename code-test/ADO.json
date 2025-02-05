@@ -3,6 +3,7 @@
   "contentVersion": "1.0.0.0",
   "resources": [
     {
+      #RG
       "type": "Microsoft.Resources/resourceGroups",
       "apiVersion": "2021-04-01",
       "location": "[parameters('location')]",

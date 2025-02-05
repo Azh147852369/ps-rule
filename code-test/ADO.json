@@ -1,7 +1,11 @@
 {
-  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
-  "contentVersion": "1.0.0.0",
-  "parameters": {},
-  "variables": {},
-  "resources": []
+    "id": "/subscriptions/09ebdd2c-f4b5-4e5f-b0ef-1d22d82e7e97/resourceGroups/ADO",
+    "name": "ADO",
+    "type": "Microsoft.Resources/resourceGroups",
+    "location": "westus2",
+    "tags": {},
+    "properties": {
+        "provisioningState": "Succeeded"
+    },
+    "apiVersion": "2020-06-01"
 }

@@ -11,3 +11,12 @@ steps:
     baseline: Azure.Pillar.OperationalExcellence
     outputFormat: Sarif
     outputPath: output/ps-rule-results.sarif 
+
+- task: PowerShell@2
+  displayName: 'Run PSRule'
+  continueOnError: true
+  inputs:
+    targetType: 'inline'
+    script: |
+      Invoke-PSRule -inputPath "code-test/989d9a1a-b126-437c-a3b1-895a530d1ec0.json" -Module 'PSRule.Rules.Azure'
+    

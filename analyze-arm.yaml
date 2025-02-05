@@ -18,6 +18,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
+      write host "hello world"
       Install-Module -Name PSRule.Rules.Azure -Scope CurrentUser -Force
       Invoke-PSRule -inputPath "code-test/" -Module 'PSRule.Rules.Azure'
     

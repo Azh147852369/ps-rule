@@ -8,5 +8,6 @@ steps:
   inputs:
     modules: 'PSRule.Rules.Azure'
     inputPath: code-test/ADO.jason
-    baseline: Azure.GA_2023_09 outputFormat: Sarif
+    baseline: Azure.GA_2023_09
+    outputFormat: Sarif
     outputPath: output/ps-rule-results.sarif 

@@ -5,7 +5,10 @@ requires:
 configuration:
   # Enable expansion of Azure Template files.
   AZURE_PARAMETER_FILE_EXPANSION: true
-
+include:
+  module:
+    - psrule.rules.azure
+    
   # Enable expansion of Azure Bicep files.
   AZURE_BICEP_FILE_EXPANSION: true
 

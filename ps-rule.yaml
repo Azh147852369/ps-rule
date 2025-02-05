@@ -1,4 +1,8 @@
 configuration:
   # Enable automatic expansion of Azure parameter files
   AZURE_PARAMETER_FILE_EXPANSION: true
+  baseline:
+  group:
+    latest: PSRule.Rules.Azure\Azure.GA_2023_03
+    preview: PSRule.Rules.Azure\Azure.Preview_2023_03
   

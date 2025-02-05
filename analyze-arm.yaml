@@ -18,6 +18,6 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      Install-Module -Name PSRule.Rules.Azure -Scope CurrentUser -Force -AllowClobbers
+      Install-Module -Name PSRule.Rules.Azure -Scope CurrentUser -Force
       Invoke-PSRule -inputPath "code-test/989d9a1a-b126-437c-a3b1-895a530d1ec0.json" -Module 'PSRule.Rules.Azure'
     

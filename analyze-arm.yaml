@@ -7,7 +7,7 @@ steps:
   continueOnError: true
   inputs:
     modules: 'PSRule.Rules.Azure'
-    inputPath: code-test/989d9a1a-b126-437c-a3b1-895a530d1ec0.json
+    inputPath: code-test/
     baseline: Azure.All
     outputFormat: Sarif
     outputPath: output/ps-rule-results.sarif 

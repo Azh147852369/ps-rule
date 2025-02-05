@@ -7,7 +7,7 @@ steps:
   continueOnError: true
   inputs:
     modules: 'PSRule.Rules.Azure'
-    inputPath: code-test/ADO.jason
+    inputPath: code-test/ADO.json
     baseline: '@latest'
     outputFormat: Sarif
     outputPath: output/ps-rule-results.sarif 

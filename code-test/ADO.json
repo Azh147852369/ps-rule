@@ -1,41 +1,27 @@
 {
-    "name": "vnet-test",
-    "id": "/subscriptions/09ebdd2c-f4b5-4e5f-b0ef-1d22d82e7e97/resourceGroups/ADO/providers/Microsoft.Network/virtualNetworks/vnet-test",
-    "etag": "W/\"11fb9deb-37d9-4024-954a-d87e6cdb111f\"",
-    "type": "Microsoft.Network/virtualNetworks",
-    "location": "eastus",
-    "tags": {},
-    "properties": {
-        "provisioningState": "Succeeded",
-        "resourceGuid": "3b0166d8-db80-422e-bf62-7735bb2d2c1e",
-        "addressSpace": {
-            "addressPrefixes": [
-                "10.0.0.0/16"
-            ]
-        },
-        "encryption": {
-            "enabled": false,
-            "enforcement": "AllowUnencrypted"
-        },
-        "subnets": [
-            {
-                "name": "default",
-                "id": "/subscriptions/09ebdd2c-f4b5-4e5f-b0ef-1d22d82e7e97/resourceGroups/ADO/providers/Microsoft.Network/virtualNetworks/vnet-test/subnets/default",
-                "etag": "W/\"11fb9deb-37d9-4024-954a-d87e6cdb111f\"",
-                "properties": {
-                    "provisioningState": "Succeeded",
-                    "addressPrefixes": [
-                        "10.0.0.0/24"
-                    ],
-                    "delegations": [],
-                    "privateEndpointNetworkPolicies": "Disabled",
-                    "privateLinkServiceNetworkPolicies": "Enabled"
-                },
-                "type": "Microsoft.Network/virtualNetworks/subnets"
-            }
-        ],
-        "virtualNetworkPeerings": [],
-        "enableDdosProtection": false
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "resources": [
+    {
+      "type": "Microsoft.Resources/resourceGroups",
+      "apiVersion": "2021-04-01",
+      "location": "[parameters('location')]",
+      "name": "[parameters('resourceGroupName')]"
+    }
+  ],
+  "parameters": {
+    "location": {
+      "type": "string",
+      "defaultValue": "East US",
+      "metadata": {
+        "description": "Location for the resource group"
+      }
     },
-    "apiVersion": "2024-01-01"
+    "resourceGroupName": {
+      "type": "string",
+      "metadata": {
+        "description": "Name of the resource group"
+      }
+    }
+  }
 }

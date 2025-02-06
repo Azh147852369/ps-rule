@@ -18,6 +18,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
+      Install-Module -Name Az.Accounts -Scope CurrentUser -AllowClobber
       Import-Module -name Az.Accounts
       Update-Module -Name Az
       write-host "hello world"

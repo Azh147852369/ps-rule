@@ -18,7 +18,12 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
+      Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+      Import-Module Az.Accounts
+      Update-Module -Name Az
       write-host "hello world"
-      Install-Module -Name 'PSRule.Rules.Azure' -Repository PSGallery -Scope CurrentUser
-      Export-AzRuleData -Subscription 'Test' -OutputPath 'out/' ;
+      Export-AzRuleData -Subscription 'Test'
+      write-host "hello world"
+      
+      
     

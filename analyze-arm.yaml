@@ -15,6 +15,8 @@ steps:
 - task: PowerShell@2
   displayName: 'Run PSRule'
   continueOnError: true
+  pool:
+          vmImage: 'windows-latest'
   inputs:
     targetType: 'inline'
     script: |

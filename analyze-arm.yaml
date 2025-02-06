@@ -18,7 +18,6 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
       Import-Module Az.Accounts
       Update-Module -Name Az
       write-host "hello world"

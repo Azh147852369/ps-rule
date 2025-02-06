@@ -18,7 +18,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      Import-Module Az.Accounts
+      Import-Module -name Az.Accounts
       Update-Module -Name Az
       write-host "hello world"
       Export-AzRuleData -Subscription 'Test'

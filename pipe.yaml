@@ -1,6 +1,6 @@
 stages:
-  -stage: 'PS'
-     pool:
-       vmImage: "windows-latest"
-     steps: 
-       - template: 'analyze-arm.yaml'
+  - stage: 'PS'
+    pool:
+      vmImage: 'windows-latest'
+    steps:
+      - template: 'analyze-arm.yaml'

@@ -1,3 +1,9 @@
+trigger:
+  branches:
+    include:
+      - main
+      - develop
+
 stages:
   - stage: 'PS'
     pool:

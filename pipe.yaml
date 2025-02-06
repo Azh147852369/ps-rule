@@ -1,0 +1,5 @@
+stages:
+  -stage: 'PS'
+     pool:
+       vmImage: "windows-latest"
+     steps: 'analyze-arm.yaml'

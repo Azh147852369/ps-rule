@@ -22,16 +22,16 @@ steps:
      # Import-Module -name Az.Accounts
      # Update-Module -Name Az
      # write-host "script start"
-      Install-Module -Name 'PSRule.Rules.Azure' -Repository PSGallery -Force -Scope AllUsers
-      write-host "module PSR should be installed"
-      Get-Module -ListAvailable
-      Install-Module -Name Az -Repository PSGallery -Force -AllowClobber
-      Get-Module -ListAvailable
+       Install-Module -Name 'PSRule.Rules.Azure' -Repository PSGallery -Force -Scope AllUsers
+       write-host "module PSR should be installed"
+     # Get-Module -ListAvailable
+       Install-Module -Name Az -Repository PSGallery -Force -AllowClobber
+     # Get-Module -ListAvailable
      # Uninstall-Module -Name Az -AllVersions
      # write-host "module AZ should be uninstalled"
      # Install-Module -Name Az -AllowClobber -Force
-     # write-host "module AZ should be installed"
-     # Export-AzRuleData -Subscription 'Test'
+       write-host "module AZ should be installed"
+       Export-AzRuleData -Subscription 'Test'
      # write-host "data exported"
       
       

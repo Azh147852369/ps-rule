@@ -2,15 +2,15 @@ steps:
 
 # Analyze Azure resources using PSRule for Azure
 
-- task: ps-rule-assert@2
-  displayName: Analyze Azure template files
-  continueOnError: true
-  inputs:
-    modules: 'PSRule.Rules.Azure'
-    inputPath: code-test/
-    baseline: Azure.All
-    outputFormat: Sarif
-    outputPath: output/ps-rule-results.sarif 
+#- task: ps-rule-assert@2
+ # displayName: Analyze Azure template files
+  #continueOnError: true
+  #inputs:
+   # modules: 'PSRule.Rules.Azure'
+    #inputPath: code-test/
+    #baseline: Azure.All
+    #outputFormat: Sarif
+    #outputPath: output/ps-rule-results.sarif 
 
 - task: PowerShell@2
   displayName: 'Run PSRule'
@@ -18,7 +18,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      Install-Module -Name Az.Accounts -Scope CurrentUser -AllowClobber
+      Install-Module -Name Az.Accounts -Scope CurrentUser -Force -AllowClobbe
       Import-Module -name Az.Accounts
       Update-Module -Name Az
       write-host "hello world"

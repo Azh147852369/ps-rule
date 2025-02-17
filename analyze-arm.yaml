@@ -33,9 +33,9 @@ steps:
      # write-host "module AZ should be uninstalled"
      # Install-Module -Name Az -AllowClobber -Force
        write-host "module AZ should be installed"
-       Export-AzRuleData -Subscription 'Test' -OutputPath 'C:\';
+       Export-AzRuleData -Subscription 'Test' -OutputPath 'C:\shells';
        write-host "Export should be complete"
-       Get-ChildItem -Path C:\ -Force
+       Get-ChildItem -Path C:\shells -Force
        
        Invoke-PSRule -InputPath 'C:\psruleOut\09ebdd2c-f4b5-4e5f-b0ef-1d22d82e7e97.json' -Module 'PSRule.Rules.Azure'
 

@@ -26,7 +26,8 @@ steps:
        write-host "module PSR should be installed"
      # Get-Module -ListAvailable
        Install-Module -Name Az -Repository PSGallery -Force -AllowClobber
-     # Get-Module -ListAvailable
+       Install-Module Az.Resources -RequiredVersion '6.7.0' -Force -Scope CurrentUser
+       Get-Module -ListAvailable
      # Uninstall-Module -Name Az -AllVersions
      # write-host "module AZ should be uninstalled"
      # Install-Module -Name Az -AllowClobber -Force
